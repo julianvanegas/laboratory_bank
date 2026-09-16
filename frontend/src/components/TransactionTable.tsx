@@ -14,7 +14,13 @@ export default function TransactionTable({ transactions, accountNumber }: Transa
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const normalizedSearch = search.trim().toLocaleLowerCase();
-  const filteredTransactions = useMemo(() => transactions.filter((item) => [item.senderAccountNumber, item.receiverAccountNumber, String(item.amount), item.timestamp ? date.format(new Date(item.timestamp)) : ""].some((value) => value.toLocaleLowerCase().includes(normalizedSearch))), [transactions, normalizedSearch]);
+  const filteredTransactions = useMemo(() => transactions
+    .filter((item) => [item.senderAccountNumber, item.receiverAccountNumber, String(item.amount), item.timestamp ? date.format(new Date(item.timestamp)) : ""].some((value) => value.toLocaleLowerCase().includes(normalizedSearch)))
+    .sort((first, second) => {
+      if (!first.timestamp) return 1;
+      if (!second.timestamp) return -1;
+      return new Date(second.timestamp).getTime() - new Date(first.timestamp).getTime();
+    }), [transactions, normalizedSearch]);
   const pageCount = Math.max(1, Math.ceil(filteredTransactions.length / PAGE_SIZE));
   const visibleTransactions = filteredTransactions.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 

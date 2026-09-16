@@ -184,8 +184,9 @@ Desde la raiz del proyecto:
 
 ```bash
 cd backend
+chmod +x ./mvnw
 set -a
-. .env
+source .env
 set +a
 ./mvnw spring-boot:run
 ```
@@ -230,12 +231,13 @@ $env:BACKEND_URL="http://localhost:8080"; npm run dev
 
 ```bash
 cd backend
+chmod +x ./mvnw
 set -a
-. .env
+source .env
 set +a
 ./mvnw clean package -DskipTests
 set -a
-. .env
+source .env
 set +a
 java -jar target/backend_bank-0.0.1-SNAPSHOT.jar
 ```

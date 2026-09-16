@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #ffffff; }
+a { color: inherit; text-decoration: none; }
+.app-header { border-bottom: 1px solid #eceaf2; background: rgba(255,255,255,.94) !important; }
+.brand-mark { width: 38px; height: 38px; border-radius: 10px; background: #6d4aff; display: grid; place-items: center; color: #ffffff; }
+.icon-tile { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; color: #6d4aff; background: #f0edff; }
+.page-shell { width: 100%; max-width: 1180px; margin: 0 auto; padding: 52px 24px 72px; }
+.eyebrow { letter-spacing: .11em; text-transform: uppercase; font-size: .72rem; font-weight: 700; color: #6d4aff; }
+@media (max-width: 800px) {
+	.page-shell { padding: 34px 16px 52px; }
+}

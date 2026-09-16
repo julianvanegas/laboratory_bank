@@ -1,0 +1,3 @@
+# Maven wrapper and scripts
+backend/mvnw text eol=lf
+backend/*.cmd text eol=crlf

@@ -33,6 +33,7 @@ backend/.env*
 !backend/src/test/**/build/
 
 # Node.js / Next.js
+frontend/frontend/
 frontend/node_modules/
 frontend/.pnp
 frontend/.pnp.*

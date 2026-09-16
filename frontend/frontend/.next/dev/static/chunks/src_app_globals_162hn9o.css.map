@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 2, "column": 0}, "map": {"version":3,"sources":["file:///Users/julianvanegaslopez/Projects/laboratory_bank/frontend/src/app/globals.css"],"sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap\");\n\n* { box-sizing: border-box; }\nbody { margin: 0; background: #ffffff; }\na { color: inherit; text-decoration: none; }\n.app-header { border-bottom: 1px solid #eceaf2; background: rgba(255,255,255,.94) !important; }\n.brand-mark { width: 38px; height: 38px; border-radius: 10px; background: #6d4aff; display: grid; place-items: center; color: #ffffff; }\n.icon-tile { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; color: #6d4aff; background: #f0edff; }\n.page-shell { width: 100%; max-width: 1180px; margin: 0 auto; padding: 52px 24px 72px; }\n.eyebrow { letter-spacing: .11em; text-transform: uppercase; font-size: .72rem; font-weight: 700; color: #6d4aff; }\n@media (max-width: 800px) {\n\t.page-shell { padding: 34px 16px 52px; }\n}\n"],"names":[],"mappings":"AAEA;;;;AACA;;;;;AACA;;;;;AACA;;;;;AACA;;;;;;;;;;AACA;;;;;;;;;;AACA;;;;;;;AACA;;;;;;;;AACA;EACC"}}]
-}

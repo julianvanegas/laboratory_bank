@@ -2,6 +2,7 @@ package com.laboratory.bank.service;
 
 import com.laboratory.bank.dto.CustomerDTO;
 import com.laboratory.bank.entity.Customer;
+import com.laboratory.bank.exception.CustomerNotFoundException;
 import com.laboratory.bank.mapper.CustomerMapper;
 import com.laboratory.bank.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class CustomerService {
     }
     public CustomerDTO getCustomerById(Long id) {
         return customerRepository.findById(id).map(customerMapper::toDTO)
-                .orElseThrow(()-> new RuntimeException("Cliente no encontrado"));
+                .orElseThrow(()-> new CustomerNotFoundException("Cliente no encontrado"));
     }
 
     public CustomerDTO createCustomer(CustomerDTO customerDTO) {

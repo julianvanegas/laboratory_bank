@@ -4,8 +4,8 @@ import Providers from "./providers";
 import AppHeader from "../components/AppHeader";
 
 export const metadata: Metadata = {
-  title: "Laboratory Bank | Operaciones",
-  description: "Panel de operaciones para Laboratory Bank",
+  title: "Laboratory Bank",
+  description: "Panel de administración de aplicación de laboratorio de banco",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

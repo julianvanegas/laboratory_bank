@@ -242,7 +242,7 @@ set +a
 set -a
 source .env
 set +a
-java -jar target/backend_bank-0.0.1-SNAPSHOT.jar
+java -jar target/bank.jar
 ```
 
 El backend escucha en el puerto definido por `SERVER_PORT`.

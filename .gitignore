@@ -3,7 +3,8 @@
 
 # Repository and editor metadata
 .git/
-.github/
+.github/modernize
+!.github/workflows/**
 .idea/
 .vscode/
 

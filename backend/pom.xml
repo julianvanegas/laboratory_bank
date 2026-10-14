@@ -106,6 +106,7 @@ https://maven.apache.org/xsd/maven-4.0.0.xsd">
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>bank</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

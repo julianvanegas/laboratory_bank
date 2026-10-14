@@ -88,3 +88,18 @@ jobs:
             ${{ secrets.DOCKER_USERNAME }}/laboratory-bank-backend:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+  
+  deploy-backend:
+    name: Deploy backend to Render
+    needs: docker
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Trigger Render deploy
+        env:
+          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+          IMAGE: ${{ secrets.DOCKERHUB_IMAGE }}:${{ github.sha }}
+        run: |
+          ENCODED=$(python3 -c "import urllib.parse,os;print(urllib.parse.quote(os.environ['IMAGE'], safe=''))")
+          curl --fail-with-body -sS "${HOOK}&imgURL=${ENCODED}"

@@ -3,7 +3,8 @@
 
 # Repository and editor metadata
 .git/
-.github/
+.github/*
+!.github/workflows/**
 .idea/
 .vscode/
 

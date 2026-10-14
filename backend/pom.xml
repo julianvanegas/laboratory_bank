@@ -33,6 +33,10 @@ https://maven.apache.org/xsd/maven-4.0.0.xsd">
 		<java.version>17</java.version>
 
 		<mapstruct.version>1.5.5.Final</mapstruct.version>
+
+		<sonar.projectKey>julianvanegas_laboratory_bank</sonar.projectKey>
+		<sonar.organization>julianvanegas</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>

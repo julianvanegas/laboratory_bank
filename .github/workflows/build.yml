@@ -25,7 +25,7 @@ jobs:
         with:
           name: jacoco-report
           path: backend/target/site/jacoco
-
+  
   sonar:
     name: SonarCloud analysis
     needs: tests
